@@ -96,8 +96,10 @@
 
       #header-hamburger {
         position: absolute;
-        top: 18px;
-        padding: 10px;
+        top: 5px;
+        left: -12px;
+        padding: 8px;
+        width: 48px;
         display: inline-block;
         background: none;
         border: none;
@@ -131,8 +133,169 @@
         background-size: 452px 436px;
       }
 
+      #header-naverpay {
+        position: absolute;
+        top: 5px;
+        left: 41px;
+        padding: 8px;
+        display: inline-block;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      #header-naverpay:hover::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 48px;
+        height: 48px;
+        background-color: var(--color_option_bg);
+        margin: auto;
+        border-radius: 50%;
+      }
+
+      #header-naverpay > div {
+        background-image: url(./sp_main.png);
+        width: 32px;
+        height: 32px;
+        z-index: 1;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position-x: -248px;
+        background-position-y: -260px;
+        background-size: 452px 436px;
+      }
+
+      #header-navertalk {
+        position: absolute;
+        top: 5px;
+        right: 94px;
+        padding: 8px;
+        display: inline-block;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      #header-navertalk:hover::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 48px;
+        height: 48px;
+        background-color: #f5f7f8;
+        background-color: var(--color_option_bg);
+        margin: auto;
+        border-radius: 50%;
+      }
+
+      #header-navertalk > div {
+        background-image: url(./sp_main.png);
+        width: 32px;
+        height: 32px;
+        z-index: 1;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position-x: -99px;
+        background-position-y: -316px;
+        background-size: 452px 436px;
+      }
+
+      #header-naveralarm {
+        position: absolute;
+        top: 5px;
+        right: 42px;
+        padding: 8px;
+        display: inline-block;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      #header-naveralarm:hover::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 48px;
+        height: 48px;
+        background-color: var(--color_option_bg);
+        margin: auto;
+        border-radius: 50%;
+      }
+
+      #header-naveralarm > div {
+        background-image: url(./sp_main.png);
+        width: 32px;
+        height: 32px;
+        z-index: 1;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position-x: -311px;
+        background-position-y: -232px;
+        background-size: 452px 436px;
+      }
+      #header-navershoppig {
+        position: absolute;
+        top: 5px;
+        right: -10px;
+        padding: 8px;
+        display: inline-block;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      #header-navershoppig:hover::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 48px;
+        height: 48px;
+        background-color: var(--color_option_bg);
+        margin: auto;
+        border-radius: 50%;
+      }
+
+      #header-navershoppig > div {
+        background-image: url(./sp_main.png);
+        width: 32px;
+        height: 32px;
+        z-index: 1;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position-x: -33px;
+        background-position-y: -316px;
+        background-size: 452px 436px;
+      }
+
       #main {
         height: 2000px;
+      }
+
+      .blind {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
       }
     </style>
   </head>
@@ -141,7 +304,34 @@
       <div id="wrap-center">
         <div id="header">
           <button id="header-hamburger">
+            <!-- ::before -->
             <div></div>
+            <span class="blind">확장 영역</span>
+            <!-- ::after -->
+          </button>
+          <button id="header-naverpay">
+            <!-- ::before -->
+            <div></div>
+            <span class="blind">네이버 페이</span>
+            <!-- ::after -->
+          </button>
+          <button id="header-navertalk">
+            <!-- ::before -->
+            <div></div>
+            <span class="blind">톡</span>
+            <!-- ::after -->
+          </button>
+          <button id="header-naveralarm">
+            <!-- ::before -->
+            <div></div>
+            <span class="blind">알림</span>
+            <!-- ::after -->
+          </button>
+          <button id="header-navershoppig">
+            <!-- ::before -->
+            <div></div>
+            <span class="blind">장바구니</span>
+            <!-- ::after -->
           </button>
         </div>
         <div id="search"></div>
