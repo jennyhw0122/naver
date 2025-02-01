@@ -219,9 +219,11 @@
         background-position-y: -316px;
         background-size: 452px 436px;
       }
+
       #search {
         margin: 0 30px;
       }
+
       #search > form {
         display: inline-flex;
         top: 52px;
@@ -504,7 +506,7 @@
         width: 420px;
       }
 
-      #main-left-ad,#main-right-ad{
+      #main-left-ad, #main-right-ad{
         background-color: #f4f6fa;
       }
 
@@ -531,11 +533,74 @@
 
       #main-shopping{
         height: 560px;
-
       }
+
       #main-login {
         height: 164px;
+        padding: 21px 20px 18px;
+        font-size: 1.4rem;
+        display: flex;
+        flex-flow: column;
       }
+
+      #main-login > div:first-of-type {
+        line-height: 20px;
+      }
+
+      #main-login-button{
+        font-size: 1.4rem;
+        background-color: rgb(3, 199, 90);
+        box-shadow: 0 2px 4px 0 rgba(3, 199, 90, .12);
+        color: rgb(255, 255, 255);
+        padding: 17px 0px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.06);
+        border-image: initial;
+        border-radius: 4px;
+        height: 56px;
+        margin-top: 13px;
+        border: 1px solid rgba(0, 0, 0, .06);
+        margin-bottom: 16px;
+      }
+
+      #main-login-button i{
+        vertical-align: 2px;
+        background-image: url(./sp_main.png);
+        background-size: 452px 436px;
+        background-position: 0px -301px;
+        background-repeat: no-repeat;
+        width: 72px;
+        height: 14px;
+        display: inline-block;
+        margin: 3px 8px 0 0;
+        vertical-align: top;
+      }
+
+      #main-login > div:last-of-type{
+        font-size: 1.3rem;
+      }
+
+      #main-login > div:last-of-type a{
+        text-decoration: none;
+        color: var(--color_caption2);
+        letter-spacing: -0.4px;
+      }
+      
+      #main-login > div:last-of-type a:hover{
+        text-decoration: underline;
+      }
+
+      #main-login > div:last-of-type > a:nth-of-type(2)::before , #main-login > div:last-of-type > a:nth-of-type(2)::after{
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 12px;
+        background-color: #d3d5d7;
+        background-color: var(--color_dot_divider);
+        margin: 4px 12px 0;
+      }
+
       #main-right-ad {
         height:240px;
       }
@@ -554,7 +619,7 @@
         border-top: 1px solid var(--color_border_in);
       }
       
-      #main-weather{
+      #main-weather {
         height: 236px;
       }
 
@@ -709,9 +774,17 @@
             <section id="main-shopping"></section>
           </div>
           <div id="main-right">
-            <section id="main-login"></section>
+            <section id="main-login">
+            <div>네이버를 더 안전하고 편리하게 이용하세요</div>
+            <a href="" id="main-login-button"><i style="vertical-align: -1px;"></i>로그인</a>
+            <div>
+              <a href="#">아이디 찾기</a>
+              <a href="#">비밀번호 찾기</a>
+              <a href="#">회원가입</a>
+            </div>
+          </section>
             <aside id="main-right-ad"></aside>
-            <section id="main-weater" class="weather-and-stock">
+            <section id="main-weather" class="weather-and-stock">
             <header>날씨</header>
             <div></div>
           </section>
