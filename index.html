@@ -549,18 +549,18 @@
         border-radius: 50%;
         vertical-align: 5px;
       }
-      #main-newstand-top .dot, #main-newstand-top .slash{
+      .main-same.dot, .main-same .slash{
         color: rgba(8,8,8,.5);
         font-weight: 800;
       }
 
-      #main-newstand-top .slash{
+      .main-same .slash{
         position: relative;
         padding-left: 26px;
       }
       
 
-      #main-newstand-top .slash::before {
+      .main-same .slash::before {
         content: '';
         display: inline-block;
         position: absolute;
@@ -573,7 +573,7 @@
         transform: skewX(-15deg);
       }
 
-      #main-newstand header{
+      .main-same header{
         font-size: 1.6rem;
         color: rgba(8, 8, 8, .5);
         display: flex;
@@ -582,10 +582,11 @@
         margin-bottom: 17px;
       }
 
-      #main-newstand header .bold{
+      .main-same header .bold{
         font-weight: bold;
         color: black;
       }
+      
       #main-newstand-gray {
         display: flex;
         justify-content: flex-start;
@@ -673,16 +674,16 @@
         width: 1px;
         height: 12px;
       }
-      #main-newstand a{
+      .main-same a{
         text-decoration: none;
         color: var(--color_caption1);
       }
 
-      #main-newstand a :visited{
+      .main-same a :visited{
         color: inherit;
       }
 
-      #main-newstand a:hover{
+      .main-same a:hover{
         text-decoration: underline;
       }
       #main-newstand-grid{
@@ -709,7 +710,7 @@
         overflow: hidden;
       }
 
-      #main-newstand footer {
+      .main-same footer {
         border-top: 1px solid var(--color_border_in);
         padding: 10px 0 11px;
         font-size: 1.3rem;
@@ -762,7 +763,7 @@
         width: 20px;
         height: 20px;
       }
-      #main-newstand footer .prev ,#main-newstand footer .next {
+      .main-same footer .prev ,.main-same footer .next {
         background: none;
         border: none;
         content: '';
@@ -781,11 +782,11 @@
         align-items: center;
       }
 
-      #main-newstand footer .prev::before {
+      .main-same footer .prev::before {
         transform: rotate(180deg);
       }
 
-      #main-newstand footer .prev::before , #main-newstand footer .next::before{
+      .main-same footer .prev::before , .main-same footer .next::before{
         content: "";
         display: block;
         background-image: url(./sp_main.png);
@@ -796,20 +797,85 @@
         height: 12px;
       }
 
-      #main-newstand footer .text{
+      .main-samefooter .text{
         padding: 0px 16px;
       }
-      #main-newstand footer .news{
+      .main-same footer .news{
       color: var(--color_news);
       }
-      #main-newstand footer .total{
+      .main-same footer .total{
         color: rgba(96, 96, 96, .5);
       }
-      
-      #main-shopping{
+
+      #main-shopping {
         height: 560px;
+        display: flex;
+        flex-flow: column;
       }
 
+
+      #main-shopping-top {
+        padding: 19px 20px 16px;
+      }
+
+      #main-shopping footer .text {
+        display: inline-block;
+        min-width: 176px;
+        padding: 0 16px;
+      }
+      
+                #main-shopping-gray {
+                    display: flex;
+                }
+                #main-shopping-gray .left {
+                    width: 668px;
+                    height: 50px;
+                    padding: 15px 20px 14px;
+                    display: flex;
+                    background-color: var(--color_option_bg);
+                }
+                #main-shopping-gray .right {
+                    margin-left: auto;
+                    padding: 10px 0;
+                }
+                #main-shopping-grid {
+                    margin-top: 18px;
+                    display: grid;
+                    grid-template-rows: 90px 95px 170px;
+                    grid-template-columns: 1fr 1fr 1fr 1fr 250px;
+                    column-gap: 20px;
+                }
+                #main-shopping-grid .item {
+                    line-height: 20px;
+                    letter-spacing: -.8px;
+                    font-size: 1.4rem;
+                }
+                #main-shopping-grid .item > .image {
+                    width: 115px;
+                    height: 115px;
+                    border-radius: 4px;
+                    background-color: gray;
+                    margin-bottom: 10px;
+                }
+                #main-shopping-grid .item > .text {
+                    text-align: left;
+                }
+                .item:nth-child(1), .item:nth-child(2), .item:nth-child(3), .item:nth-child(4) {
+                    grid-row: 1 / span 2;
+                }
+                .item:nth-child(5), .item:nth-child(6), .item:nth-child(11) > div:first-child {
+                    padding: 10px 12px 5px;
+                    border-radius: 4px;
+                    border: 1px solid rgba(0,0,0,.05);
+                    background: rgba(245,248,251,.6);
+                }
+                .item:nth-child(6) {
+                    margin: 11px 0;
+                }
+                .item:nth-child(11) > div:first-child {
+                    height: 135px;
+                    margin-bottom: 10px;
+                }
       #main-login {
         height: 164px;
         padding: 21px 20px 18px;
@@ -1045,7 +1111,7 @@
         <main id="main">
           <div id="main-left">
             <aside id="main-left-ad"></aside>
-            <section id="main-newstand">
+            <section id="main-newstand" class="main-same">
               <div id="main-newstand-top">
               <header>
                 <a href="#" class="bold">뉴스스텐드</a>
@@ -1103,7 +1169,82 @@
               <button class="grid"><span class="blind">격자보기</span></button>
             </footer>
           </section>
-            <section id="main-shopping"></section>
+          <section id="main-shopping" class="main-same">
+            <div id="main-shopping-top">
+              <header>
+                  <a href="#" class="bold">쇼핑</a>
+                  <a href="#" class="slash">맨즈</a>
+                  <a href="#" class="slash">원쁠딜</a>
+                  <a href="#" class="slash">쇼핑라이브</a>
+              </header>
+              <div id="main-shopping-gray">
+                <div class="right">
+                    <span>1</span>
+                    <span>/13</span>
+                    <button class="prev"><span class="blind">이전페이지</span></button>
+                    <button class="next"><span class="blind">다음페이지</span></button>
+                </div>
+            </div>
+            <div id="main-shopping-grid">
+              <div class="item">
+                <div class="image"></div>
+                <div class="text">지금득템찬스<br>2만원대가격</div>
+            </div>
+            <div class="item">
+              <div class="image"></div>
+              <div class="text">엄마 품 같아요!<br>이동가방 설특가</div>
+          </div>
+              <div class="item">
+                  <div class="image"></div>
+                  <div class="text">prmium MADE<br>꼭 입어보세요~</div>
+              </div>
+              <div class="item">
+                  <div class="image"></div>
+                  <div class="text">포근하고~따뜻!<br>1만원대에~득템!</div>
+              </div>
+              <div class="item">
+                  <div class="image"></div>
+                  <div class="text">딱 겨울 필수품~<br>1만원대 니트!</div>
+              </div>
+              <div class="item">
+                  <div class="image"></div>
+                  <div class="text">부기 걱정 그만~<br>괄사로 브이라인</div>
+              </div>
+              <div class="item">
+                  <div class="image"></div>
+                  <div class="text">목주름 많으신분<br>깜짝 특가 1+1</div>
+              </div>
+              <div class="item">
+                  <div class="image"></div>
+                  <div class="text">주방 녹물수돗물<br>이거면 끝이야!</div>
+              </div>
+              <div class="item">
+                  <div class="image"></div>
+                  <div class="text">누워보고 선택해<br>홈쇼품 100일~</div>
+              </div>
+              <div class="item">
+                  <div class="image"></div>
+                  <div class="text">안심하고 먹어요<br>아이들이 좋아해</div>
+              </div>
+              <div class="item">
+                  <div></div>
+                  <a href="#">오늘의 혜택</a>
+                  <div>써스데이아일랜드, 겨울 아우터 5만원대부터 ~ 역대급 SALE!</div>
+                  <div>
+                      <a href="#"><span class="event">특가로 만나는 BEST!</span>절대놓칠 수 없는 특별 할인 찬스!</a>
+              </div>
+              <div class="item">
+                <div></div>
+                <div>아웃렛 쇼핑 득템찬스! 시즌오프SALE</div>
+            </div>
+          </div>
+      </div>
+    <footer>
+          <button class="prev"><span class="blind">이전 페이지</span></button>
+          <div class="text"><span class="hot">쇼핑핫아이템</span>&nbsp;더보기&nbsp;1<span class="total">/13</span></div>
+          <button class="next"><span class="blind">다음 페이지</span></button>
+      </footer>
+            </section>
           </div>
           <div id="main-right">
             <section id="main-login">
