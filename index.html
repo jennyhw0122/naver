@@ -533,7 +533,7 @@
         flex-flow: column;
       }
 
-      #main-newstand-top, #main-shopping-top  {
+      #main-newstand-top {
         flex: 1;
         padding: 18px 20px;
       }
@@ -884,13 +884,16 @@
               </header>
               <div id="main-newstand-gray">
                 <div>
-                <a href="#">분야별뉴스</a>
-                <a href="#">연합뉴스</a>
-                <a href="#">마침내 엔비디아 뚫은 삼성전자...HBM3E 8단 공급 승인 얻어</a>
-              </div>
-              <div>
+                  <a href="#">분야별뉴스</a>
+                  <a href="#">연합뉴스</a>
+                    <div>
+                      <a href="#">마침내 엔비디아 뚫은 삼성전자...HBM3E 8단 공급 승인 얻어</a>
+                    </div>
+                </div>
+              <div class="right">
                 <a href="#">뉴스스텐드</a>
                 <a href="#">뉴스홈</a>
+              </div>
               </div>
               <div id="main-newstand-grid">
                 <div>KBS</div>
@@ -918,12 +921,15 @@
                 <div>비즈워치</div>
                 <div>지원이짱</div>
               </div>
-              </div>
-              <footer>
-                <button class="blind">이전</button>
-                <div>언론사 더보기 1페이지 1/4</div>
-              </footer>
-            </section>
+            </div>
+            <footer>
+              <button class="prev"><span class="blind">이전 페이지</span></button>
+              <<div class="text"><span class="news">언론사</span>&nbsp;더보기&nbsp;1<span class="total">/4</span></div>
+              <button class="next"><span class="blind">다음 페이지</span></button>
+              <button class="list"><span class="blind">목록보기</span></button>
+              <button class="grid"><span class="blind">격자보기</span></button>
+            </footer>
+          </section>
             <section id="main-shopping"></section>
           </div>
           <div id="main-right">
