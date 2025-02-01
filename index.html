@@ -537,6 +537,7 @@
         flex: 1;
         padding: 18px 20px;
       }
+
       #main-newstand-top .dot::before {
         content: '';
         display: inline-block;
@@ -547,6 +548,29 @@
         margin: 9px 7px 0;
         border-radius: 50%;
         vertical-align: 5px;
+      }
+      #main-newstand-top .dot, #main-newstand-top .slash{
+        color: rgba(8,8,8,.5);
+        font-weight: 800;
+      }
+
+      #main-newstand-top .slash{
+        position: relative;
+        padding-left: 26px;
+      }
+      
+
+      #main-newstand-top .slash::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 4px;
+        left: 13px;
+        width: 1px;
+        height: 15px;
+        background-color: #d3d5d7;
+        background-color: var(--color_dot_divider);
+        transform: skewX(-15deg);
       }
 
       #main-newstand header{
@@ -856,7 +880,7 @@
                 <a href="#" class="slash">엔터</a>
                 <a href="#" class="slash">스포츠</a>
                 <a href="#" class="slash">경제</a>
-                <a href="#">쇼핑투데이</a>
+                <a href="#" class="slash">쇼핑투데이</a>
               </header>
               <div id="main-newstand-gray">
                 <div>
