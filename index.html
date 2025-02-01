@@ -2,8 +2,8 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <title>NAVER</title>
     <style>
@@ -87,7 +87,7 @@
       }
 
       #wrap-center {
-        width: 1280px;
+        min-width: 1340px;
         display: inline-block;
       }
 
@@ -95,6 +95,8 @@
         text-align: left;
         position: relative;
         height: 52px;
+        width: 1280px;
+        margin: 0 30px;
       }
 
       #header-hamburger,
@@ -199,7 +201,7 @@
         background-position-y: -232px;
         background-size: 452px 436px;
       }
-      
+
       #header-navershoppig {
         top: 5px;
         right: -10px;
@@ -217,32 +219,62 @@
         background-position-y: -316px;
         background-size: 452px 436px;
       }
-
+      #search {
+        margin: 0 30px;
+      }
       #search > form {
         display: inline-flex;
         top: 52px;
         left: 50%;
-        width: 706px;
-        height: 58px;
+        width: 708px;
+        height: 60px;
         border: 1px solid #03c75a;
         border-radius: 33px;
         text-align: left;
       }
 
+      #search > form:hover {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+      }
+
       #search-svg {
         display: inline-flex;
-        width: 68px;
-        max-width: 12px;
-        margin-right: 12px;
-        height: 100%;
-        padding: 10px;
         justify-content: center;
         align-items: center;
+        width: 68px;
+        padding: 17px 16px 17px 27px;
+        height: 100%;
         position: relative;
       }
+
+      #search-svg::after {
+        display: none;
+      }
+
       #search > form svg {
         width: 24px;
         height: 24px;
+      }
+
+      #search-svg::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 20px;
+        background-color: #e4e4e4;
+        right: 0;
+        top: 20px;
+      }
+
+      #search > form:focus-within #search-svg::after {
+        content: "";
+        width: 1px;
+        height: 20px;
+        background-color: #e4e4e4;
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        top: 20px;
       }
 
       #search-svg svg {
@@ -252,13 +284,25 @@
       }
 
       #search-input {
-        width: 480px;
-        padding: 17px 0;
-        font-size: 2rem;
-        line-height: 24px;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
         font-weight: bold;
         border: none;
         outline: none;
+        width: 480px;
+        height: 58px;
+        color: var(--color_search);
+        z-index: 10;
+        position: relative;
+        padding: 17px 0;
+        background-color: rgba(0, 0, 0, 0);
+        box-sizing: border-box;
+      }
+      #search-input::placeholder {
+        color: white;
+      }
+      #search-input:focus::placeholder {
+        color: #e4e4e4;
       }
 
       #search-right {
@@ -268,7 +312,9 @@
         justify-content: flex-end;
       }
 
-      #search-keyboard, #search-recent, #search-button {
+      #search-keyboard,
+      #search-recent,
+      #search-button {
         background: transparent;
         border: none;
         cursor: pointer;
@@ -284,6 +330,11 @@
         width: 24px;
         height: 14px;
       }
+
+      #search-keyboraed:hover::before {
+        filter: brightness(0, 7);
+      }
+
       #search-recent::before {
         content: "";
         display: block;
@@ -294,6 +345,7 @@
         width: 10px;
         height: 6px;
       }
+
       #search-button {
         padding: 17px 27px 16px 10px;
       }
@@ -360,8 +412,14 @@
         <div id="search">
           <form action="">
             <a id="search-svg" href="#">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"
+                ></path>
               </svg>
             </a>
             <label for="search-input" class="blind">검색어 입력</label>
@@ -378,8 +436,15 @@
                 <span class="blind">자동완성/최근검색어펼치기</span>
               </button>
               <button href="#" id="search-button">
-                <svg id="search-btn" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" style="fill: #03c75a">
-                  <path d="M22.13.5c11.378 0 20.632 9.256 20.632 20.63 0 4.699-1.566 9.155-4.439 12.782l10.164 10.165a2.41 2.41 0 0 1-1.706 4.115 2.412 2.412 0 0 1-1.706-.705L33.31 35.719a2.41 2.41 0 0 1 0-3.41 15.71 15.71 0 0 0 4.628-11.178c0-8.718-7.09-15.808-15.807-15.808-8.718 0-15.808 7.09-15.808 15.808 0 7.15 4.817 13.43 11.714 15.273a2.41 2.41 0 0 1 1.705 2.954 2.41 2.41 0 0 1-2.95 1.705C7.788 38.658 1.5 30.46 1.5 21.131 1.5 9.756 10.756.5 22.13.5zm4.716 34.746a3.483 3.483 0 1 1 0 6.966 3.483 3.483 0 0 1 0-6.966z"></path>
+                <svg
+                  id="search-btn"
+                  viewBox="0 0 50 50"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="fill: #03c75a"
+                >
+                  <path
+                    d="M22.13.5c11.378 0 20.632 9.256 20.632 20.63 0 4.699-1.566 9.155-4.439 12.782l10.164 10.165a2.41 2.41 0 0 1-1.706 4.115 2.412 2.412 0 0 1-1.706-.705L33.31 35.719a2.41 2.41 0 0 1 0-3.41 15.71 15.71 0 0 0 4.628-11.178c0-8.718-7.09-15.808-15.807-15.808-8.718 0-15.808 7.09-15.808 15.808 0 7.15 4.817 13.43 11.714 15.273a2.41 2.41 0 0 1 1.705 2.954 2.41 2.41 0 0 1-2.95 1.705C7.788 38.658 1.5 30.46 1.5 21.131 1.5 9.756 10.756.5 22.13.5zm4.716 34.746a3.483 3.483 0 1 1 0 6.966 3.483 3.483 0 0 1 0-6.966z"
+                  ></path>
                 </svg>
                 <div><span class="blind">검색</span></div>
               </button>
