@@ -76,8 +76,7 @@
         --color_shop_rgb: 152, 88, 245;
       }
 
-      html,
-      body {
+      html, body {
         font-size: 10.5px;
         line-height: 10.5px;
         margin: 0;
@@ -86,39 +85,35 @@
         font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic",
           "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
       }
-      form,
-      ul {
+      form, ul {
         margin: 0;
         padding: 0;
       }
+      
       #wrap {
         text-align: center;
       }
 
       #wrap-center {
-        min-width: 1340px;
+        width: 1280px;
         display: inline-block;
       }
 
       #header {
-        text-align: left;
+        text-align:left;
         position: relative;
-        height: 52px;
-        width: 1280px;
+        height: 64px;
         margin: 0 30px;
       }
 
-      #header-hamburger,
-      #header-naverpay,
-      #header-navertalk,
-      #header-naveralarm,
-      #header-navershoppig {
+      #header-hamburger, #header-naverpay, #header-navertalk,#header-naveralarm, #header-navershoppig {
         position: absolute;
         display: inline-block;
         background: none;
         border: none;
         cursor: pointer;
       }
+
       #header-hamburger {
         top: 5px;
         left: -12px;
@@ -126,11 +121,7 @@
         width: 48px;
       }
 
-      #header-hamburger:hover::before,
-      #header-naverpay:hover::before,
-      #header-navertalk:hover::before,
-      #header-naveralarm:hover::before,
-      #header-navershoppig:hover::before {
+      #header-hamburger:hover::before, #header-naverpay:hover::before, #header-navertalk:hover::before, #header-naveralarm:hover::before, #header-navershoppig:hover::before {
         content: "";
         display: block;
         position: absolute;
@@ -370,7 +361,7 @@
       }
 
       #nav {
-      margin-top: 12px;
+        margin-top: 12px;
       }
 
       #nav > ul {
@@ -388,15 +379,15 @@
         text-decoration: none;
         text-align: center;
       }
-      
+
       #nav a div {
         position: relative;
       }
-      
+
       #nav a div::after {
         position: relative;
         z-index: 1;
-        content: '';
+        content: "";
         margin: 2px;
         display: inline-block;
         background-image: url(./sp_main.png);
@@ -406,18 +397,18 @@
         width: 40px;
         height: 40px;
       }
-      
+
       #nav a:visited {
         color: black;
       }
-      
+
       #nav li {
         width: 64px;
         margin-left: 4px;
         display: flex;
         justify-content: center;
       }
-      
+
       #nav li:nth-of-type(1) {
         margin-left: 0;
       }
@@ -429,7 +420,7 @@
         font-size: 1.3rem;
         line-height: 20px;
       }
-      
+
       #nav li a div::before {
         content: "";
         display: block;
@@ -476,15 +467,15 @@
       }
 
       #nav li:nth-of-type(9) a div::after {
-        background-position: -164px -260px
+        background-position: -164px -260px;
       }
 
       #nav li:nth-of-type(10) a div::before {
       }
-      
+
       #nav li:nth-of-type(10) a div::after {
         content: "";
-        background-image: url('./steaming.ico');
+        background-image: url("./steaming.ico");
         background-size: cover;
         background-position: center;
       }
@@ -499,9 +490,23 @@
       }
 
       #main {
+        margin-top: 51px;
+        display: flex;
         height: 2000px;
       }
 
+      #main-left {
+        width: 830px;
+        margin-right: 30px;
+      }
+
+      #main-right {
+        width: 420px;
+      }
+
+      #main-left-ad,#main-right-ad{
+        background-color: #f4f6fa;
+      }
       .blind {
         position: absolute;
         clip: rect(0 0 0 0);
@@ -550,22 +555,12 @@
         <div id="search">
           <form action="">
             <a id="search-svg" href="#">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"
-                ></path>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path>
               </svg>
             </a>
             <label for="search-input" class="blind">검색어 입력</label>
-            <input
-              id="search-input"
-              type="text"
-              placeholder="검색어를 입력하세요."
-            />
+            <input id="search-input" type="text" placeholder="검색어를 입력하세요."/>
             <div id="search-right">
               <button href="#" id="search-keyboard">
                 <span class="blind">입력도구</span>
@@ -574,15 +569,8 @@
                 <span class="blind">자동완성/최근검색어펼치기</span>
               </button>
               <button href="#" id="search-button">
-                <svg
-                  id="search-btn"
-                  viewBox="0 0 50 50"
-                  xmlns="http://www.w3.org/2000/svg"
-                  style="fill: #03c75a"
-                >
-                  <path
-                    d="M22.13.5c11.378 0 20.632 9.256 20.632 20.63 0 4.699-1.566 9.155-4.439 12.782l10.164 10.165a2.41 2.41 0 0 1-1.706 4.115 2.412 2.412 0 0 1-1.706-.705L33.31 35.719a2.41 2.41 0 0 1 0-3.41 15.71 15.71 0 0 0 4.628-11.178c0-8.718-7.09-15.808-15.807-15.808-8.718 0-15.808 7.09-15.808 15.808 0 7.15 4.817 13.43 11.714 15.273a2.41 2.41 0 0 1 1.705 2.954 2.41 2.41 0 0 1-2.95 1.705C7.788 38.658 1.5 30.46 1.5 21.131 1.5 9.756 10.756.5 22.13.5zm4.716 34.746a3.483 3.483 0 1 1 0 6.966 3.483 3.483 0 0 1 0-6.966z"
-                  ></path>
+                <svg id="search-btn" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" style="fill: #03c75a">
+                  <path d="M22.13.5c11.378 0 20.632 9.256 20.632 20.63 0 4.699-1.566 9.155-4.439 12.782l10.164 10.165a2.41 2.41 0 0 1-1.706 4.115 2.412 2.412 0 0 1-1.706-.705L33.31 35.719a2.41 2.41 0 0 1 0-3.41 15.71 15.71 0 0 0 4.628-11.178c0-8.718-7.09-15.808-15.807-15.808-8.718 0-15.808 7.09-15.808 15.808 0 7.15 4.817 13.43 11.714 15.273a2.41 2.41 0 0 1 1.705 2.954 2.41 2.41 0 0 1-2.95 1.705C7.788 38.658 1.5 30.46 1.5 21.131 1.5 9.756 10.756.5 22.13.5zm4.716 34.746a3.483 3.483 0 1 1 0 6.966 3.483 3.483 0 0 1 0-6.966z"></path>
                 </svg>
                 <div><span class="blind">검색</span></div>
               </button>
@@ -590,75 +578,88 @@
           </form>
         </div>
         <nav id="nav">
-        <ul>
-          <li>
-            <a href="">
-              <div></div>
+          <ul>
+            <li>
+              <a href="">
+                <div></div>
                 <span>메일</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div></div>
                 <span>카페</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div></div>
                 <span>블로그</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div></div>
                 <span>쇼핑</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div></div>
                 <span>뉴스</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div></div>
                 <span>증권</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div></div>
                 <span>부동산</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-            <div></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div></div>
                 <span>지도</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div></div>
                 <span>웹툰</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div></div>
                 <span>치지직</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div></div>
-              <span class="blind">더보기</span>
-            </a>
-          </li>
-        </ul>
-        <div id="main"></div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div></div>
+                <span class="blind">더보기</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <main id="main">
+          <div id="main-left">
+            <aside id="main-left-ad"></aside>
+            <section id="main-newstand"></section>
+            <section id="main-shopping"></section>
+          </div>
+          <div id="main-right">
+            <section id="main-login"></section>
+            <aside id="main-right-ad"></aside>
+            <section id="main-weater"></section>
+            <section id="main-stock"></section>
+          </div>
+        </main>
       </div>
     </div>
   </body>
