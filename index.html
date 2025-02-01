@@ -586,6 +586,90 @@
         font-weight: bold;
         color: black;
       }
+      #main-newstand-gray {
+        display: flex;
+        justify-content: flex-start;
+        height: 50px;
+        padding: 12px 20px;
+        background-color: var(--color_option_bg);
+        border-radius: 4px;
+        font-size: 1.4rem;
+        line-height: 26px;
+      }
+      #main-newstand-gray .left{
+        flex:1;
+        display: flex;
+      }
+      
+      #main-newstand-gray .left > a:first-of-type{
+        width: 85.5px;
+      }
+
+      #main-newstand-gray .left > a:first-of-type::after {
+        content: '';
+        background-image: url(./sp_main.png);
+        background-size: 452px 436px;
+        background-position: -175px -211px;
+        background-repeat: no-repeat;
+        width: 9px;
+        height: 6px;
+        display: inline-block;
+        margin: 10px 0 0 5px;
+        vertical-align: top;
+      }
+
+      #main-newstand-animation {
+        padding-left: 25px;
+        position: relative;
+        display: flex;
+      }
+      #main-newstand-animation::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 7px;
+        left: 12px;
+        background-color: #d3d5d7;
+        background-color: var(--color_dot_divider);
+        width: 1px;
+        height: 12px;
+      }
+
+      #main-newstand-animation > a:first-of-type {
+        position: relative;
+        top: -1px;
+        line-height: 26px;
+      }
+
+      #main-newstand-animation > a:first-of-type::after {
+        content: '';
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        background-color: #d3d5d7;
+        background-color: var(--color_dot_divider);
+        margin: 12px 6px 0 6px;
+        border-radius: 50%;
+        vertical-align: 5px;
+      }
+
+      #main-newstand-gray .bold{
+        font-weight: bold;
+        padding-left: 25px;
+        position: relative;
+      }
+
+      #main-newstand-gray .bold::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 7px;
+        left: 12px;
+        background-color: #d3d5d7;
+        background-color: var(--color_dot_divider);
+        width: 1px;
+        height: 12px;
+      }
       #main-newstand a{
         text-decoration: none;
       }
@@ -621,7 +705,7 @@
         overflow: hidden;
       }
 
-      #main-newstand footer{
+      #main-newstand footer {
         border-top: 1px solid var(--color_border_in);
         padding: 10px 0 11px;
         font-size: 1.3rem;
@@ -633,6 +717,48 @@
         justify-content: center;
         position: relative;
       }
+      #main-newstand footer .list, #main-newstand footer .grid {
+        position: absolute;
+        border: none;
+        cursor: pointer;
+        top:0;
+        background-color: transparent;
+      }
+      #main-newstand footer .list{
+        right: 50px;
+        padding: 18px 9px 18px 20px;
+      }
+
+      #main-newstand footer .list::before {
+        content: '';
+        display: inline-block;
+        background-image: url(./sp_main.png);
+        background-size: 452px 436px;
+        background-position: -227px -376px;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+      }
+
+      #main-newstand footer .grid {
+        right: 0;
+        padding: 18px 20px 18px 9px;
+      }
+
+      #main-newstand footer .grid::before {
+        content: '';
+        display: inline-block;
+        background-image: url(./sp_main.png);
+        background-size: 452px 436px;
+        background-position: -432px -21px;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+      }
+      #main-newstand footer .news{
+      color: var(--color_news);
+      }
+      
       #main-shopping{
         height: 560px;
       }
@@ -883,17 +1009,17 @@
                 <a href="#" class="slash">쇼핑투데이</a>
               </header>
               <div id="main-newstand-gray">
-                <div>
+                <div class="left">
                   <a href="#">분야별뉴스</a>
-                  <a href="#">연합뉴스</a>
-                    <div>
+                  <div id="main-newstand-animation">
+                      <a href="#">연합뉴스</a>
                       <a href="#">마침내 엔비디아 뚫은 삼성전자...HBM3E 8단 공급 승인 얻어</a>
                     </div>
                 </div>
-              <div class="right">
-                <a href="#">뉴스스텐드</a>
-                <a href="#">뉴스홈</a>
-              </div>
+                <div class="right">
+                  <a href="#">뉴스스텐드</a>
+                  <a href="#" class="bold">뉴스홈</a>
+                </div>
               </div>
               <div id="main-newstand-grid">
                 <div>KBS</div>
