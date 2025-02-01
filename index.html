@@ -312,9 +312,7 @@
         justify-content: flex-end;
       }
 
-      #search-keyboard,
-      #search-recent,
-      #search-button {
+      #search-keyboard, #search-recent, #search-button {
         background: transparent;
         border: none;
         cursor: pointer;
@@ -490,9 +488,11 @@
       }
 
       #main {
-        margin-top: 51px;
+        margin: 0 30px;
+        margin-top: 50px;
         display: flex;
         height: 2000px;
+        padding-bottom: 60px;
       }
 
       #main-left {
@@ -507,6 +507,61 @@
       #main-left-ad,#main-right-ad{
         background-color: #f4f6fa;
       }
+
+      aside[id$=ad]{
+        border-radius: 8px;
+      }
+
+      #main-left-ad {
+        height: 130px;
+        margin-bottom: 16px;
+      }
+
+      section[id^=main]{
+        box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, .04);
+        border-radius: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        background-color: var(--color_block_bg);
+      }
+
+      #main-newstand{
+        height: 426px;
+      }
+
+      #main-shopping{
+        height: 560px;
+
+      }
+      #main-login {
+        height: 164px;
+      }
+      #main-right-ad {
+        height:240px;
+      }
+
+      #main-weather, #main-stock{
+        padding: 6px 0;
+        height: 52px;
+      }
+
+      .weather-and-stock > header {
+        height: 52px;
+        padding: 6px 0;
+      }
+
+      #main-weather > div, #main-stock > div{
+        border-top: 1px solid var(--color_border_in);
+      }
+      
+      #main-weather{
+        height: 236px;
+      }
+
+      #main-stock {
+        height: 236px;
+      }
+
       .blind {
         position: absolute;
         clip: rect(0 0 0 0);
@@ -656,8 +711,14 @@
           <div id="main-right">
             <section id="main-login"></section>
             <aside id="main-right-ad"></aside>
-            <section id="main-weater"></section>
-            <section id="main-stock"></section>
+            <section id="main-weater" class="weather-and-stock">
+            <header>날씨</header>
+            <div></div>
+          </section>
+            <section id="main-stock" class="weather-and-stock">
+            <header>증식</header>
+            <div></div>
+          </section>
           </div>
         </main>
       </div>
