@@ -527,10 +527,50 @@
         background-color: var(--color_block_bg);
       }
 
-      #main-newstand{
+      #main-newstand {
         height: 426px;
+        display: flex;
+        flex-flow: column;
       }
 
+      #main-newstand-top, #main-shopping-top  {
+        flex: 1;
+        padding: 18px 20px;
+      }
+
+      #main-newstand header{
+        font-size: 1.6rem;
+        color: rgba(8, 8, 8, .5);
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      #main-newstand header .bold{
+        font-weight: bold;
+        color: var(--color_title);
+      }
+      #main-newstand a{
+        text-decoration: none;
+      }
+      #main-newstand-gray{
+        display: flex;
+        justify-content: flex-start;
+      }
+      
+      #main-newstand a :visited{
+        color: inherit;
+      }
+
+      #main-newstand a:hover{
+        text-decoration: underline;
+      }
+      #main-newstand footer{
+        border-top: 1px solid var(--color_border_in);
+        position: relative;
+        padding: 10px 0 11px;
+        line-height: 34px;
+        text-align: center;
+      }
       #main-shopping{
         height: 560px;
       }
@@ -770,7 +810,58 @@
         <main id="main">
           <div id="main-left">
             <aside id="main-left-ad"></aside>
-            <section id="main-newstand"></section>
+            <section id="main-newstand">
+              <div id="main-newstand-top">
+              <header>
+                <a href="#" class="bold">뉴스스텐드</a>
+                <a href="#" class="dot">언론사편집</a>
+                <a href="#" class="slash">엔터</a>
+                <a href="#" class="slash">스포츠</a>
+                <a href="#" class="slash">경제</a>
+                <a href="#">쇼핑투데이</a>
+              </header>
+              <div id="main-newstand-gray">
+                <div>
+                <a href="#">분야별뉴스</a>
+                <a href="#">연합뉴스</a>
+                <a href="#">마침내 엔비디아 뚫은 삼성전자...HBM3E 8단 공급 승인 얻어</a>
+              </div>
+              <div>
+                <a href="#">뉴스스텐드</a>
+                <a href="#">뉴스홈</a>
+              </div>
+              <div id="main-newstand-grid">
+                <div>KBS</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+                <div>매일경제</div>
+              </div>
+              </div>
+              <footer>
+                <button class="blind">이전</button>
+                <div>언론사 더보기 1페이지 1/21</div>
+              </footer>
+            </section>
             <section id="main-shopping"></section>
           </div>
           <div id="main-right">
