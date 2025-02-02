@@ -829,6 +829,7 @@
         flex: 1;
         padding: 18px 20px;
       }
+
       #main-shopping-grid{
         display: flex;
         height: 376px;
@@ -839,6 +840,7 @@
 
       #main-shopping-grid .left{
         min-width: 0;
+        width: 248px;
       }
 
       #shopping-name {
@@ -852,6 +854,8 @@
         grid-gap: 1px;
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(3, 1fr);
+        width: 248px;
+        height: 100px;
       }
       #shopping-order{
         position: relative;
@@ -859,9 +863,11 @@
         padding: 9px;
         border-radius: 4px;
         background: rgba(245, 248, 251, .6);
+        width: 248px;
+        height: 100px;
       }
 
-      #shoppimg-order::before {
+      #shopping-order::before {
         content: "";
         display: block;
         position: absolute;
@@ -873,6 +879,15 @@
         border-radius: inherit;
       }
 
+      #shopping-ad-sale{
+        position: relative;
+        margin-top: 12px;
+        padding: 9px;
+        border-radius: 4px;
+        background: rgba(245, 248, 251, .6);
+       width: 248px;
+        height: 100px;
+      }
       #main-shopping-grid .right{
         margin-right: 0;
         margin-left: 20px;
@@ -899,7 +914,6 @@
         display: block;
         padding-top: 8px;
       }
-
 
       #main-shopping-gray{
         background-color: var(--color_option_bg);
@@ -1258,6 +1272,7 @@
                 </div>
                 <div id="shopping-ad">
                   <a href="#"></a>
+                  <div id="shopping-ad-sale"></div>
                   <div class="text">10박스씩 쟁겨둬요! 퓨리카뮤신 특가</div>
                 </div>
               </div>
