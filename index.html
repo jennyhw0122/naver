@@ -834,6 +834,7 @@
         height: 376px;
         padding: 0 20px 1px;
         box-sizing: border-box;
+        justify-content: center;
       }
 
       #main-shopping-grid .left{
@@ -876,8 +877,28 @@
         margin-right: 0;
         margin-left: 20px;
         position: relative;
-        width: 588px;
+        width: 560px;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
       }
+
+      #shopping-item{ 
+        position: relative;
+        width: 98px;
+      }
+
+      #main-shopping-grid .item {
+        overflow: hidden;
+        font-size: 1.3rem;
+        line-height: 19px;
+        letter-spacing: -.4px;
+        white-space: nowrap;
+        display: block;
+        padding-top: 8px;
+      }
+
 
       #main-shopping-gray{
         background-color: var(--color_option_bg);
@@ -1242,35 +1263,35 @@
               <div class="right">
               <div class="item">
                 <div id="shopping-item"></div>
-                <div class="image"></div>
+                <div class="image" style="width: 98px; height: 126px;"></div>
                 <div class="text">지금득템찬스<br>2만원대가격</div>
             </div>
             <div class="item">
-              <div class="image"></div>
+              <div class="image" style="width: 98px; height: 126px;"></div>
               <div class="text">엄마 품 같아요!<br>이동가방 설특가</div>
           </div>
               <div class="item">
-                  <div class="image"></div>
+                <div class="image" style="width: 98px; height: 126px;"></div>
                   <div class="text">prmium MADE<br>꼭 입어보세요~</div>
               </div>
               <div class="item">
-                  <div class="image"></div>
+                <div class="image" style="width: 98px; height: 126px;"></div>
                   <div class="text">포근하고~따뜻!<br>1만원대에~득템!</div>
               </div>
               <div class="item">
-                  <div class="image"></div>
+                <div class="image" style="width: 98px; height: 126px;"></div>
                   <div class="text">목주름 많으신분<br>깜짝 특가 1+1</div>
               </div>
               <div class="item">
-                  <div class="image"></div>
+                <div class="image" style="width: 98px; height: 126px;"></div>
                   <div class="text">주방 녹물수돗물<br>이거면 끝이야!</div>
               </div>
               <div class="item">
-                  <div class="image"></div>
+                <div class="image" style="width: 98px; height: 126px;"></div>
                   <div class="text">누워보고 선택해<br>홈쇼품 100일~</div>
               </div>
               <div class="item">
-                  <div class="image"></div>
+                <div class="image" style="width: 98px; height: 126px;"></div>
                   <div class="text">안심하고 먹어요<br>아이들이 좋아해</div>
               </div>
             </div>
