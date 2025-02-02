@@ -92,6 +92,7 @@
       
       #wrap {
         text-align: center;
+        min-width: 1340px;
       }
 
       #wrap-center {
@@ -721,7 +722,14 @@
         display: flex;
         justify-content: center;
         position: relative;
+
       }
+
+      #main-newstand footer .text {
+      display: inline-block;
+      min-width: 176px;
+      padding: 0 16px;
+    }
       #main-newstand footer .list, #main-newstand footer .grid {
         position: absolute;
         border: none;
@@ -797,9 +805,6 @@
         height: 12px;
       }
 
-      .main-samefooter .text{
-        padding: 0px 16px;
-      }
       .main-same footer .news{
       color: var(--color_news);
       }
@@ -812,10 +817,17 @@
         display: flex;
         flex-flow: column;
       }
-
+      #main-shopping-stepper{ 
+        position: absolute;
+        top: 4px;
+        right: 20px;
+        margin-left: auto;
+        padding: 10px 0;
+      }
 
       #main-shopping-top {
-        padding: 19px 20px 16px;
+        flex: 1;
+        padding: 18px 20px;
       }
 
       #main-shopping footer .text {
@@ -823,59 +835,8 @@
         min-width: 176px;
         padding: 0 16px;
       }
-      
-                #main-shopping-gray {
-                    display: flex;
-                }
-                #main-shopping-gray .left {
-                    width: 668px;
-                    height: 50px;
-                    padding: 15px 20px 14px;
-                    display: flex;
-                    background-color: var(--color_option_bg);
-                }
-                #main-shopping-gray .right {
-                    margin-left: auto;
-                    padding: 10px 0;
-                }
-                #main-shopping-grid {
-                    margin-top: 18px;
-                    display: grid;
-                    grid-template-rows: 90px 95px 170px;
-                    grid-template-columns: 1fr 1fr 1fr 1fr 250px;
-                    column-gap: 20px;
-                }
-                #main-shopping-grid .item {
-                    line-height: 20px;
-                    letter-spacing: -.8px;
-                    font-size: 1.4rem;
-                }
-                #main-shopping-grid .item > .image {
-                    width: 115px;
-                    height: 115px;
-                    border-radius: 4px;
-                    background-color: gray;
-                    margin-bottom: 10px;
-                }
-                #main-shopping-grid .item > .text {
-                    text-align: left;
-                }
-                .item:nth-child(1), .item:nth-child(2), .item:nth-child(3), .item:nth-child(4) {
-                    grid-row: 1 / span 2;
-                }
-                .item:nth-child(5), .item:nth-child(6), .item:nth-child(11) > div:first-child {
-                    padding: 10px 12px 5px;
-                    border-radius: 4px;
-                    border: 1px solid rgba(0,0,0,.05);
-                    background: rgba(245,248,251,.6);
-                }
-                .item:nth-child(6) {
-                    margin: 11px 0;
-                }
-                .item:nth-child(11) > div:first-child {
-                    height: 135px;
-                    margin-bottom: 10px;
-                }
+
+
       #main-login {
         height: 164px;
         padding: 21px 20px 18px;
@@ -954,6 +915,9 @@
       .weather-and-stock > header {
         height: 52px;
         padding: 6px 0;
+        position: relative;
+        display: flex;
+        line-height: 40px;
       }
 
       #main-weather > div, #main-stock > div{
@@ -962,10 +926,12 @@
       
       #main-weather {
         height: 236px;
+        padding: 0 18px;
       }
 
       #main-stock {
         height: 236px;
+        padding: 0 18px;
       }
 
       .blind {
@@ -1177,7 +1143,7 @@
                   <a href="#" class="slash">원쁠딜</a>
                   <a href="#" class="slash">쇼핑라이브</a>
               </header>
-              <div id="main-shopping-gray">
+              <div id="main-shopping-stepper">
                 <div class="right">
                     <span>1</span>
                     <span>/13</span>
@@ -1202,13 +1168,6 @@
                   <div class="image"></div>
                   <div class="text">포근하고~따뜻!<br>1만원대에~득템!</div>
               </div>
-              <div class="item">
-                  <div class="image"></div>
-                  <div class="text">딱 겨울 필수품~<br>1만원대 니트!</div>
-              </div>
-              <div class="item">
-                  <div class="image"></div>
-                  <div class="text">부기 걱정 그만~<br>괄사로 브이라인</div>
               </div>
               <div class="item">
                   <div class="image"></div>
@@ -1226,7 +1185,7 @@
                   <div class="image"></div>
                   <div class="text">안심하고 먹어요<br>아이들이 좋아해</div>
               </div>
-              <div class="item">
+              <div class="item" class="main-shopping-gray">
                   <div></div>
                   <a href="#">오늘의 혜택</a>
                   <div>써스데이아일랜드, 겨울 아우터 5만원대부터 ~ 역대급 SALE!</div>
