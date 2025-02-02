@@ -829,6 +829,66 @@
         flex: 1;
         padding: 18px 20px;
       }
+      #main-shopping-grid{
+        display: flex;
+        height: 376px;
+        padding: 0 20px 1px;
+        box-sizing: border-box;
+      }
+
+      #main-shopping-grid .left{
+        min-width: 0;
+      }
+
+      #shopping-name {
+        position: relative;
+        padding: 9px 11px 4px;
+        border-radius: 4px;
+        background: rgba(245, 248, 251, .6);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 1px;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+      }
+      #shopping-order{
+        position: relative;
+        margin-top: 12px;
+        padding: 9px;
+        border-radius: 4px;
+        background: rgba(245, 248, 251, .6);
+      }
+
+      #shoppimg-order::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid rgba(0, 0, 0, .05);
+        border-radius: inherit;
+      }
+
+      #main-shopping-grid .right{
+        margin-right: 0;
+        margin-left: 20px;
+        position: relative;
+        width: 588px;
+      }
+
+      #main-shopping-gray{
+        background-color: var(--color_option_bg);
+        display: flex;
+        padding: 15px 20px 14px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        line-height: 21px;
+        font-weight: 700;
+        
+      }
 
       #main-shopping footer .text {
         display: inline-block;
@@ -1152,7 +1212,36 @@
                 </div>
             </div>
             <div id="main-shopping-grid">
+              <div class="left">
+                <div id="shopping-name">
+                  <div class="bold">쿠팡</div>
+                  <div class="dot">G마켓</div>
+                  <div class="dot">옥션</div>
+                  <div class="bold">올리브영</div>
+                  <div class="dot">11번가</div>
+                  <div class="dot">SSG닷컴</div>
+                  <div lass="dot">GS SHOP</div>
+                  <div class="dot">하프클럽</div>
+                  <div class="dot">CJ온스타일</div>
+                </div>
+                <div id="shopping-order">
+                  <div class="image"></div>
+                  <div class="text">마이쇼핑</div>
+                  <div class="image"></div>
+                  <div class="text">리뷰적립</div>
+                  <div class="image"></div>
+                  <div class="text">주문</div>
+                  <div class="image"></div>
+                  <div class="text">장바구니</div>
+                </div>
+                <div id="shopping-ad">
+                  <a href="#"></a>
+                  <div class="text">10박스씩 쟁겨둬요! 퓨리카뮤신 특가</div>
+                </div>
+              </div>
+              <div class="right">
               <div class="item">
+                <div id="shopping-item"></div>
                 <div class="image"></div>
                 <div class="text">지금득템찬스<br>2만원대가격</div>
             </div>
@@ -1167,7 +1256,6 @@
               <div class="item">
                   <div class="image"></div>
                   <div class="text">포근하고~따뜻!<br>1만원대에~득템!</div>
-              </div>
               </div>
               <div class="item">
                   <div class="image"></div>
@@ -1185,17 +1273,15 @@
                   <div class="image"></div>
                   <div class="text">안심하고 먹어요<br>아이들이 좋아해</div>
               </div>
-              <div class="item" class="main-shopping-gray">
-                  <div></div>
-                  <a href="#">오늘의 혜택</a>
-                  <div>써스데이아일랜드, 겨울 아우터 5만원대부터 ~ 역대급 SALE!</div>
-                  <div>
-                      <a href="#"><span class="event">특가로 만나는 BEST!</span>절대놓칠 수 없는 특별 할인 찬스!</a>
-              </div>
-              <div class="item">
-                <div></div>
-                <div>아웃렛 쇼핑 득템찬스! 시즌오프SALE</div>
             </div>
+            </div>
+              <div id="main-shopping-gray">
+                <div class="left">
+                  <a href="#">오늘의 혜택</a>
+                  </div>
+                  <div id="main-shopping-animation">
+                  <div><span class="event">특가로 만나는 BEST!</span>절대놓칠 수 없는 특별 할인 찬스!</a></div>
+                </div>
           </div>
       </div>
     <footer>
